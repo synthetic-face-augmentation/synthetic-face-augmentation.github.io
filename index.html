@@ -237,15 +237,33 @@
                       <span>Paper</span>
                     </a>
                   </span>
-                  <!-- <span class="link-block">
-                <a href="#" target="_blank"
-                class="external-link button is-n  ormal is-rounded">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code (Coming Soon)</span>
-              </a>
-              </span> -->
+
+                  <span class="link-block">
+                    <a href="#" target="_blank" class="external-link button is-normal is-rounded">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code (Coming Soon)</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/KorayUlusan/fsxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>FSXL Dataset</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/KorayUlusan/fpxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>FPXL Dataset</span>
+                    </a>
+                  </span>
 
 
                 </div>
@@ -349,7 +367,7 @@
 
             <div id="results-carousel" class="carousel results-carousel">
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig2.jpg" width="600"
+                <img src="static/figures/fig2.jpg" width="750"
                   alt="Classical augmentations analysis showing flipping, cropping, and color adjustments effects on DreamBooth facial similarity" />
               </div>
               <div class="column is-centered has-text-centered">
@@ -454,7 +472,7 @@
                     generated image of the subject, yielding better facial similarity while maintaining compositional control.
                   </p>
                   <div class="column is-centered has-text-centered">
-                    <img src="static/figures/fig6.jpg" width="700"
+                    <img src="static/figures/fig6.jpg"
                       alt="InstantID two-step generation pipeline comparison showing keypoints-based versus subject-based reference image approaches for improved facial similarity"
                       class="is-centered" />
                     <p class="has-text-justified" style="margin-top: 10px;">
@@ -498,7 +516,8 @@
                   <ul>
                     <li><strong>Demographics:</strong> Predominantly White (81%) and older adults (74.2% over 45), balanced gender representation.</li>
                     <li><strong>Performance:</strong> DreamBooth and InstantID delivered similar quality and detail; DreamBooth showed superior facial similarity.</li>
-                    <li><strong>Preferences:</strong> Slight preference (\(\Delta=4\%\)) for InstantID’s consistent professional style; DreamBooth favored for realistic identity preservation.
+                    <li><strong>Preferences:</strong> Slight preference (\(\Delta=4\%\)) for InstantID’s consistent professional style; DreamBooth favored for realistic identity
+                      preservation.
                     </li>
                     <li><strong>AI Detection:</strong> Most participants struggled to identify AI portraits; experienced AI users more often detected DreamBooth images.</li>
                   </ul>
@@ -508,19 +527,19 @@
             </div>
             <div id="results-carousel-2" class="carousel results-carousel">
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig16.jpg" width="600" alt="User study demographics breakdown showing age distribution and professional background of 97 participants"
+                <img src="static/figures/fig16.jpg" width="750" alt="User study demographics breakdown showing age distribution and professional background of 97 participants"
                   class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig15.jpg" width="600" alt="User study quality assessment comparing DreamBooth vs InstantID for professional portrait generation"
+                <img src="static/figures/fig15.jpg" width="750" alt="User study quality assessment comparing DreamBooth vs InstantID for professional portrait generation"
                   class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig14.jpg" width="600"
+                <img src="static/figures/fig14.jpg" width="750"
                   alt="Facial similarity ratings from user study showing DreamBooth performance versus InstantID in identity preservation" class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig13.jpg" width="600" alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits"
+                <img src="static/figures/fig13.jpg" width="700" alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits"
                   class="is-centered" />
               </div>
             </div>
@@ -528,6 +547,68 @@
         </div>
         </div>
       </section>
+      <section class="section hero" aria-label="FSXL and FPXL Portrait Datasets">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title has-text-centered">
+                  Flickr-Suits-XL & Flickr-Portraits-XL Datasets
+                </h2>
+                <div class="buttons is-centered" style="margin-top: 1.5rem;">
+                  <span class="link-block">
+                    <a href="https://github.com/KorayUlusan/fsxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>FSXL Dataset</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/KorayUlusan/fpxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>FPXL Dataset</span>
+                    </a>
+                  </span>
+                </div>
+
+                <div class="content has-text-justified">
+                  <p>
+                    We introduce <strong>Flickr-Suits-XL (FSXL)</strong> and <strong>Flickr-Portraits-XL (FPXL)</strong>, two high-quality datasets for AI-generated professional
+                    portraits.
+                  </p>
+
+                  <p>
+                    <strong>FSXL</strong> includes 1,208 high-resolution images of people in formal attire, sourced from Flickr under permissive licenses. Images were filtered
+                    using MTCNN (single face), aligned, and cropped to match SDXL training resolution, with faces centered horizontally and positioned one-third from the top.
+                  </p>
+
+                  <p>
+                    <strong>FPXL</strong> follows the same process using raw, in-the-wild FFHQ images.
+                    Both datasets inherit demographic biases.
+                  </p>
+
+
+                  <div id="results-carousel-2" class="carousel results-carousel">
+                    <div class="column is-centered has-text-centered">
+                      <img src="static/figures/fig18.jpg" width="400" alt="Samples from FSXL dataset showing people in formal attire" class="is-centered" />
+                    </div>
+                    <div class="column is-centered has-text-centered">
+                      <img src="static/figures/fig19.jpg" width="400" alt="Samples from FPXL dataset based on FFHQ in-the-wild portraits" class="is-centered" />
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
