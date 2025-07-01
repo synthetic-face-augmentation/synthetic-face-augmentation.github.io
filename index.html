@@ -263,18 +263,11 @@
     </section>
 
     <section class="hero is-small">
-      <!-- <div class="hero-body"> -->
       <section class="hero teaser">
         <div class="container is-max-desktop">
           <div class="hero-body">
-            <!-- <div id="results-carousel" class="carousel results-carousel"> -->
             <div class="container">
               <div class="item">
-                <!-- Video will be added when available -->
-                <!-- <video poster="" id="teaser" autoplay controls muted height="150%">
-          <source src="static/figures/face_augmentation_teaser.mp4"
-          type="video/mp4">
-        </video> -->
                 <img src="static/figures/fig1.jpg" width="100%"
                   alt="Pipeline overview showing synthetic face augmentation process using DreamBooth and InstantID for improved facial resemblance in AI-generated portraits" />
                 <h2 class="content has-text-justified">
@@ -284,24 +277,15 @@
                 </h2>
               </div>
             </div>
-            <!--  </div> -->
           </div>
         </div>
-        <!--  </div> -->
       </section>
 
       <section class="section hero section-contrast">
         <div class="container is-max-desktop">
-          <!-- Abstract. -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <div class="item">
-                <p style="margin-bottom: 30px">
-                  <!-- Video will be added when available -->
-                  <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
-          <source src="static/figures/sketchy_video.mp4"
-          type="video/mp4">
-        </video> -->
                 </p>
               </div>
               <h2 class="title is-3">Abstract</h2>
@@ -326,7 +310,6 @@
               </article>
             </div>
           </div>
-          <!--/ Abstract. -->
         </div>
       </section>
 
@@ -395,8 +378,8 @@
                 <h2 class="title has-text-centered">FaceDistance Metric</h2>
                 <div class="content has-text-justified">
                   <p>
-                    To quantify facial similarity in generated images, we employ the <strong>FaceDistance</strong> metric based on FaceNet embeddings <a
-                      href="https://arxiv.org/abs/1503.03832" target="_blank" rel="noopener noreferrer">[Schroff et al., 2015]</a>. FaceNet projects facial images into a
+                    To quantify facial similarity in generated images, we employ the <strong>FaceDistance</strong> metric based on FaceNet embeddings [Schroff et al., 2015].
+                    FaceNet projects facial images into a
                     128-dimensional hyperspherical embedding space where spatial proximity reflects facial similarity.
                   </p>
 
@@ -463,7 +446,7 @@
 
                   <h3>2-Step Generation</h3>
                   <p>
-                    In <strong>2-step generation</strong>, we collect <strong>s</strong>ubject reference images (s<sub>1</sub>, ..., s<sub>n</sub>) and a separate image
+                    We collect <strong>s</strong>ubject reference images (s<sub>1</sub>, ..., s<sub>n</sub>) and a separate image
                     representing
                     the desired pose and composition s<sub>kpts</sub>. These are used as reference images and the keypoints image, respectively. While the resulting output is
                     generally satisfactory, using facial landmarks from one person to generate another reduces facial similarity due to structural differences in the five keypoints
@@ -485,7 +468,7 @@
 
                   <h3>Face Replacement</h3>
                   <p>
-                    In <strong>face replacement</strong>, users interact with a simple tool to manipulate (move/rotate/resize) their cropped face on a canvas matching the diffusion
+                    Users interact with a simple tool to manipulate (move/rotate/resize) their cropped face on a canvas matching the diffusion
                     model's output dimensions. This approach eliminates the similarity issues caused by using another person's facial landmarks. However, the method performs poorly
                     when none of the reference images show the subject facing the camera (deviations >30°). User satisfaction was higher with this approach compared to <em>2-step
                       generation</em>, which we attribute to increased interactivity and faster generation times.
@@ -509,38 +492,36 @@
                 <div class="content has-text-justified">
                   <p>
                     Our survey evaluated the professional viability of AI-generated portraits, comparing DreamBooth and InstantID headshot generators with <strong>97 white-collar
-                      professionals and students</strong>. Participants aged 18-74, mostly aged 45+, assessed quality, facial similarity, and realism.
+                      professionals and students</strong>. Participants aged 18-74 assessed quality, facial similarity, and realism.
                   </p>
                   <h3>Key Findings</h3>
                   <ul>
                     <li><strong>Demographics:</strong> Predominantly White (81%) and older adults (74.2% over 45), balanced gender representation.</li>
                     <li><strong>Performance:</strong> DreamBooth and InstantID delivered similar quality and detail; DreamBooth showed superior facial similarity.</li>
-                    <li><strong>Preferences:</strong> Slight preference (~4%) for InstantID’s consistent professional style; DreamBooth favored for realistic identity preservation.
+                    <li><strong>Preferences:</strong> Slight preference (\(\Delta=4\%\)) for InstantID’s consistent professional style; DreamBooth favored for realistic identity preservation.
                     </li>
                     <li><strong>AI Detection:</strong> Most participants struggled to identify AI portraits; experienced AI users more often detected DreamBooth images.</li>
                   </ul>
                   <p>These findings highlight the strengths and user perceptions of AI portrait generators in professional settings.</p>
                 </div>
               </div>
-
-
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="column is-centered has-text-centered">
-                  <img src="static/figures/fig16.jpg" width="600" alt="User study demographics breakdown showing age distribution and professional background of 97 participants"
-                    class="is-centered" />
-                </div>
-                <div class="column is-centered has-text-centered">
-                  <img src="static/figures/fig15.jpg" width="600" alt="User study quality assessment comparing DreamBooth vs InstantID for professional portrait generation"
-                    class="is-centered" />
-                </div>
-                <div class="column is-centered has-text-centered">
-                  <img src="static/figures/fig14.jpg" width="600"
-                    alt="Facial similarity ratings from user study showing DreamBooth performance versus InstantID in identity preservation" class="is-centered" />
-                </div>
-                <div class="column is-centered has-text-centered">
-                  <img src="static/figures/fig13.jpg" width="600" alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits"
-                    class="is-centered" />
-                </div>
+            </div>
+            <div id="results-carousel-2" class="carousel results-carousel">
+              <div class="column is-centered has-text-centered">
+                <img src="static/figures/fig16.jpg" width="600" alt="User study demographics breakdown showing age distribution and professional background of 97 participants"
+                  class="is-centered" />
+              </div>
+              <div class="column is-centered has-text-centered">
+                <img src="static/figures/fig15.jpg" width="600" alt="User study quality assessment comparing DreamBooth vs InstantID for professional portrait generation"
+                  class="is-centered" />
+              </div>
+              <div class="column is-centered has-text-centered">
+                <img src="static/figures/fig14.jpg" width="600"
+                  alt="Facial similarity ratings from user study showing DreamBooth performance versus InstantID in identity preservation" class="is-centered" />
+              </div>
+              <div class="column is-centered has-text-centered">
+                <img src="static/figures/fig13.jpg" width="600" alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits"
+                  class="is-centered" />
               </div>
             </div>
           </div>
