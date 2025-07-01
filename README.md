@@ -12,7 +12,8 @@ This repository contains the website source code for the research paper on synth
 
 ## Citation
 
-If you find this work useful, please cite:
+If you find the research paper useful, please cite:
+
 ```
 @inproceedings{Ulusan2025SynData4CV,  
   author        = {Ulusan, Koray and Kiefer, Benjamin},
