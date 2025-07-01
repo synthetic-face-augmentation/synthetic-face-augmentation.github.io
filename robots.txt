@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://synthetic-face-augmentation.github.io/sitemap.xml

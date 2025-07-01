@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research paper on improving facial resemblance in AI-generated portraits using DreamBooth and InstantID through synthetic data augmentation. CVPR 2025 SynData4CV Workshop.">
+  <meta name="keywords" content="DreamBooth, InstantID, facial resemblance, AI portraits, synthetic data, augmentation, computer vision, CVPR 2025, text-to-image generation, personalization">
+  <meta name="author" content="Koray Ulusan, Benjamin Kiefer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://synthetic-face-augmentation.github.io/">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="static/figures/fig1.jpg" />
+  <meta property="og:description" content="Research paper on improving facial resemblance in AI-generated portraits using DreamBooth and InstantID through synthetic data augmentation. CVPR 2025 SynData4CV Workshop.">
+  <meta property="og:url" content="https://synthetic-face-augmentation.github.io/" />
+  <meta property="og:image" content="https://synthetic-face-augmentation.github.io/static/figures/fig1.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Synthetic Face Augmentation Research">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID">
+  <meta name="twitter:description" content="Research paper on improving facial resemblance in AI-generated portraits using DreamBooth and InstantID through synthetic data augmentation. CVPR 2025 SynData4CV Workshop.">
+  <meta name="twitter:image" content="https://synthetic-face-augmentation.github.io/static/figures/fig1.jpg">
+
+  <!-- LinkedIn optimized Open Graph tags -->
+  <meta property="og:image:alt" content="Pipeline overview showing synthetic face augmentation process using DreamBooth and InstantID for improved facial resemblance in AI-generated portraits">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="https://www.linkedin.com/in/korayulusan/">
+  <meta property="article:published_time" content="2025-05-01T00:00:00Z">
+  <meta property="article:modified_time" content="2025-07-01T00:00:00Z">
+  <meta property="article:section" content="Computer Vision">
+  <meta property="article:tag" content="DreamBooth">
+  <meta property="article:tag" content="InstantID">
+  <meta property="article:tag" content="Facial Resemblance">
+  <meta property="article:tag" content="AI Portraits">
+  <meta property="article:tag" content="Synthetic Data">
+  <meta property="article:tag" content="CVPR 2025">
 
 
   <title>Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</title>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YD6FV17NYE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YD6FV17NYE');
+  </script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <!-- <link rel="icon" href="static/figures/icon2.png"> -->
@@ -42,21 +84,97 @@
     });
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID",
+    "description": "Research paper on improving facial resemblance in AI-generated portraits using DreamBooth and InstantID through synthetic data augmentation techniques.",
+    "image": "https://synthetic-face-augmentation.github.io/static/figures/fig1.jpg",
+    "url": "https://synthetic-face-augmentation.github.io/",
+    "datePublished": "2025-05-01",
+    "dateModified": "2025-07-01",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Koray Ulusan",
+        "url": "https://www.linkedin.com/in/korayulusan/",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Tuebingen"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Benjamin Kiefer",
+        "url": "https://scholar.google.com/citations?user=IgH9QkEAAAAJ",
+        "affiliation": [
+          {
+            "@type": "Organization",
+            "name": "University of Tuebingen"
+          },
+          {
+            "@type": "Organization",
+            "name": "LOOKOUT"
+          }
+        ]
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "CVPR 2025 SynData4CV Workshop"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Computer Vision"
+      },
+      {
+        "@type": "Thing",
+        "name": "Artificial Intelligence"
+      },
+      {
+        "@type": "Thing",
+        "name": "Machine Learning"
+      },
+      {
+        "@type": "Thing",
+        "name": "Image Generation"
+      }
+    ],
+    "keywords": "DreamBooth, InstantID, facial resemblance, AI portraits, synthetic data, augmentation, computer vision, CVPR 2025",
+    "citation": {
+      "@type": "CreativeWork",
+      "name": "arXiv:2505.03557",
+      "url": "https://arxiv.org/abs/2505.03557"
+    },
+    "isPartOf": {
+      "@type": "Event",
+      "name": "CVPR 2025 SynData4CV Workshop",
+      "url": "https://syndata4cv.github.io/"
+    }
+  }
+  </script>
 </head>
 
 <body>
 
-
-  <section class="publication-header">
-    <div class="hero-body">
-      <div class="container is-max-widescreen">
-        <!-- <div class="columns is-centered"> -->
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</h1>
+  <header>
+    <section class="publication-header">
+      <div class="hero-body">
+        <div class="container is-max-widescreen">
+          <!-- <div class="columns is-centered"> -->
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</h1>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </header>
+
+  <main>
 
 
 
@@ -134,7 +252,7 @@
           <source src="static/figures/face_augmentation_teaser.mp4"
           type="video/mp4">
         </video> -->
-              <img src="static/figures/fig1.jpg" width="100%" alt="Face Augmentation Pipeline Overview" />
+              <img src="static/figures/fig1.jpg" width="100%" alt="Pipeline overview showing synthetic face augmentation process using DreamBooth and InstantID for improved facial resemblance in AI-generated portraits" />
               <h2 class="content has-text-justified">
                 <br>
                 Pipeline for generating personalized portraits using synthetic images enhanced through classical and generative augmentations to improve identity resemblance in
@@ -163,7 +281,7 @@
               </p>
             </div>
             <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
+            <article class="content has-text-justified">
               <p>
                 Personalizing Stable Diffusion for professional portrait generation from amateur photos faces challenges in maintaining facial resemblance. This paper evaluates the
                 impact of augmentation strategies on two personalization methods: DreamBooth and InstantID.
@@ -179,7 +297,7 @@
               <p>
                 Our findings inform effective augmentation strategies for personalized text-to-image generation.
               </p>
-            </div>
+            </article>
           </div>
         </div>
         <!--/ Abstract. -->
@@ -221,19 +339,19 @@
 
           <div id="results-carousel" class="carousel results-carousel">
             <div class="column is-centered has-text-centered">
-              <img src="static/figures/fig2.jpg" width="600" alt="Classical Augmentations" />
+              <img src="static/figures/fig2.jpg" width="600" alt="Classical augmentations analysis showing flipping, cropping, and color adjustments effects on DreamBooth facial similarity" />
             </div>
             <div class="column is-centered has-text-centered">
-              <img src="static/figures/fig3.jpg" width="600" alt="Generative Augmentations" />
+              <img src="static/figures/fig3.jpg" width="600" alt="Generative augmentations using InstantID synthetic images to enhance DreamBooth training data quality" />
             </div>
             <div class="column is-centered has-text-centered">
-              <img src="static/figures/fig4-ab.jpg" width="600" alt="DreamBooth vs InstantID" />
+              <img src="static/figures/fig4-ab.jpg" width="600" alt="Comparison between DreamBooth and InstantID methods for personalized portrait generation showing facial similarity metrics" />
             </div>
             <div class="column is-centered has-text-centered">
-              <img src="static/figures/fig4-cd.jpg" width="600" alt="DreamBooth vs InstantID" />
+              <img src="static/figures/fig4-cd.jpg" width="600" alt="Additional DreamBooth vs InstantID comparison results demonstrating identity preservation differences" />
             </div>
             <div class="column is-centered has-text-centered">
-              <img src="static/figures/fig10.jpg" width="600" alt="InstantID" />
+              <img src="static/figures/fig10.jpg" width="600" alt="InstantID pipeline results showing professional portrait generation with enhanced facial resemblance" />
             </div>
           </div>
         </div>
@@ -288,7 +406,7 @@
               </div>
 
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig21.jpg" width="700" alt="FaceDistance Metric Visualization" class="is-centered" />
+                <img src="static/figures/fig21.jpg" width="700" alt="FaceDistance metric visualization demonstrating ranking system for qualitative facial similarity assessment using FaceNet embeddings" class="is-centered" />
                 <p class="has-text-centered" style="margin-top: 10px;">
                   <em>Visualization of ranking using the FaceDistance metric for qualitative facial similarity assessment.</em>
                 </p>
@@ -320,7 +438,7 @@
                   generated image of the subject, yielding better facial similarity while maintaining compositional control.
                 </p>
                 <div class="column is-centered has-text-centered">
-                  <img src="static/figures/fig6.jpg" width="700" alt="InstantID Pipelines Comparison" class="is-centered" />
+                  <img src="static/figures/fig6.jpg" width="700" alt="InstantID two-step generation pipeline comparison showing keypoints-based versus subject-based reference image approaches for improved facial similarity" class="is-centered" />
                   <p class="has-text-justified" style="margin-top: 10px;">
                     <em>Two-Step Generation Pipeline. Initial outputs use a keypoints image (s<sub>kpts</sub>) from another identity, often reducing facial similarity. Replacing
                       s<sub>kpts</sub> with a prior output of the subject improves identity preservation while retaining pose. Using four reference images offers a good trade-off,
@@ -372,16 +490,16 @@
 
             <div id="results-carousel" class="carousel results-carousel">
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig16.jpg" width="600" class="is-centered" />
+                <img src="static/figures/fig16.jpg" width="600" alt="User study demographics breakdown showing age distribution and professional background of 97 participants" class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig15.jpg" width="600" class="is-centered" />
+                <img src="static/figures/fig15.jpg" width="600" alt="User study quality assessment comparing DreamBooth vs InstantID for professional portrait generation" class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig14.jpg" width="600" class="is-centered" />
+                <img src="static/figures/fig14.jpg" width="600" alt="Facial similarity ratings from user study showing DreamBooth performance versus InstantID in identity preservation" class="is-centered" />
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/fig13.jpg" width="600" class="is-centered" />
+                <img src="static/figures/fig13.jpg" width="600" alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits" class="is-centered" />
               </div>
             </div>
           </div>
@@ -409,6 +527,8 @@
 </code></pre>
       </div>
     </section>
+
+  </main>
 
     <footer class="footer">
       <div class="columns is-centered">
