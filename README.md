@@ -1,5 +1,7 @@
 # Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID
 
+> Website is hosted on [https://synthetic-face-augmentation.github.io/](https://synthetic-face-augmentation.github.io/)
+
 This repository contains the website source code for the research paper on synthetic face augmentation strategies.
 
 ![Overview](static/figures/fig1.png)
