@@ -2,7 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -17,23 +16,23 @@ body {
   font-variant: small-caps;
 }
 
-
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .teaser .hero-body {
+    padding-bottom: 2rem;
+  }
 }
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
 }
 
-
-/*.publication-title {
-}*/
-
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -49,19 +48,48 @@ body {
   padding-bottom: 0rem;
 }
 
+@media (max-width: 768px) {
+  .publication-header .hero-body {
+    padding-top: 2rem;
+  }
+}
+
 .publication-author-block .hero-body {
   padding-top: 1rem;
   padding-bottom: 0rem;
 }
 
-
 .publication-title {
-    /*font-size: 10px;*/
     font-family: 'Google Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .publication-title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .publication-title {
+    font-size: 1.75rem !important;
+  }
 }
 
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .publication-authors {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .publication-authors {
+    font-size: 1.1rem !important;
+  }
 }
 
 .publication-venue {
@@ -76,9 +104,6 @@ body {
     font-weight: bolder;
 }
 
-.publication-authors {
-}
-
 .publication-authors a {
    color: hsl(204, 86%, 53%) !important;
 }
@@ -91,11 +116,14 @@ body {
   display: inline-block;
 }
 
-.publication-banner img {
+@media (max-width: 480px) {
+  .author-block {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
 
-.publication-authors {
-  /*color: #4286f4;*/
+.publication-banner img {
 }
 
 .publication-video {
@@ -103,7 +131,6 @@ body {
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-
     overflow: hidden;
     border-radius: 10px !important;
 }
@@ -127,15 +154,11 @@ body {
 
 .results-carousel .item {
   width: 50px;
-  height: 50px;/*
-  margin: 50px;
-  overflow: hidden;
-  padding: 50px*/;
+  height: 50px;
   font-size: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  /*margin: -25px 0 0 -25px;*/
 }
 
 .results-carousel video {
@@ -172,13 +195,194 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .publication-title {
-    font-size: 2rem !important;
-  }
-}
-
 .scroll-x {
   overflow-x: auto;
   white-space: nowrap;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-body {
+    padding: 2rem 1rem;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .title.is-3 {
+    font-size: 1.75rem !important;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .content ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-body {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .title.is-3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Button responsive design */
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .publication-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .link-block {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .link-block .button {
+    width: 100%;
+  }
+}
+
+/* Image responsive design */
+.results-carousel img,
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .results-carousel img {
+    width: 100% !important;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-carousel img {
+    width: 100% !important;
+    max-width: 350px;
+  }
+}
+
+/* Math equation responsive design */
+@media (max-width: 768px) {
+  .scroll-x {
+    font-size: 0.9rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-x {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Citation block responsive */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  pre {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  
+  pre code {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  pre {
+    font-size: 0.7rem;
+    padding: 0.75rem;
+  }
+  
+  pre code {
+    font-size: 0.7rem;
+  }
+}
+
+/* Carousel improvements for mobile */
+@media (max-width: 768px) {
+  .carousel {
+    margin: 0 -1rem;
+  }
+  
+  .carousel .item {
+    padding: 0 1rem;
+  }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footer .content {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dataset buttons responsive */
+@media (max-width: 480px) {
+  .buttons.is-centered {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons.is-centered .button {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Table responsive if any tables are added later */
+.table-container {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.8rem;
+  }
 }
