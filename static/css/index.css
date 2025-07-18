@@ -177,3 +177,8 @@ body {
     font-size: 2rem !important;
   }
 }
+
+.scroll-x {
+  overflow-x: auto;
+  white-space: nowrap;
+}

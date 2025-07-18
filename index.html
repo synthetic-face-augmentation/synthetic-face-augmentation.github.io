@@ -188,7 +188,6 @@
     <section class="publication-header">
       <div class="hero-body">
         <div class="container is-max-widescreen">
-          <!-- <div class="columns is-centered"> -->
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</h1>
           </div>
@@ -407,7 +406,7 @@
                     as:
                   </p>
 
-                  <div class="has-text-centered" style="margin: 20px 0;">
+                  <div class="has-text-centered scroll-x" style="margin: 20px 0;">
                     \[
                     \bigl[\operatorname{FaceDistance}(G, R)\bigr]_i := \frac{1}{n} \sum_{j=1}^n \delta^{[0,2]}_{\cos}\bigl(f(G_i), f(R_j)\bigr), \quad i=1, \dots, m
                     \]
@@ -415,7 +414,7 @@
 
                   <p>where</p>
 
-                  <ul>
+                  <ul class="scroll-x">
                     <li>\( f(\cdot) := \operatorname{FaceNet}\bigl(\operatorname{MTCNN}(\cdot)\bigr) \)</li>
                     <li>\(\delta^{[0,2]}_{\cos}(\mathbf{x}, \mathbf{y}) := \operatorname{clip}_{[0,2]} \left( 1 - \frac{\mathbf{x}^\top \mathbf{y}}{\|\mathbf{x}\| \,
                       \|\mathbf{y}\|}
