@@ -5,9 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Boost DreamBooth & InstantID accuracy. Access the FSXL & FPXL datasets (1,200+ high-res images) and the FaceDistance metric for AI portrait resemblance. CVPR 2025 SynData4CV Workshop.">
+    content="Struggling with facial resemblance in DreamBooth? Explore our CVPR 2025 research on FSXL/FPXL datasets, generative augmentation, and the FaceDistance metric for high-fidelity AI portraits.">
   <meta name="keywords"
-    content="DreamBooth, InstantID, facial resemblance, AI portraits, synthetic data, augmentation, computer vision, CVPR 2025, text-to-image generation, personalization">
+    content="Stable Diffusion XL, SDXL, DreamBooth, InstantID, facial resemblance, AI portraits, synthetic data, augmentation, LoRA training, CVPR 2025">
+  <meta name="citation_title" content="Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID">
+  <meta name="citation_author" content="Ulusan, Koray">
+  <meta name="citation_author" content="Kiefer, Benjamin">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="CVPR 2025 SynData4CV Workshop">
   <meta name="author" content="Koray Ulusan, Benjamin Kiefer">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://synthetic-face-augmentation.github.io/">
@@ -47,7 +52,7 @@
   <meta property="article:tag" content="CVPR 2025">
 
 
-  <title>DreamBooth & InstantID: Improve Facial Resemblance with Synthetic Data</title>
+  <title>Personalized AI Portraits: Improving DreamBooth & InstantID Resemblance</title>
 
 
   <!-- Google tag (gtag.js) -->
@@ -62,6 +67,12 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="alternate" href="https://synthetic-face-augmentation.github.io/" hreflang="en-US" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="static/favicon/apple-icon-57x57.png">
@@ -88,6 +99,11 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+
+  <style>
+    /* Ensure MathJax/math blocks don't overflow on small screens */
+    .scroll-x { overflow-x: auto; }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -184,12 +200,56 @@
 
   <script type="application/ld+json">
   {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Synthetic Face Augmentation Research",
+    "url": "https://synthetic-face-augmentation.github.io/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://synthetic-face-augmentation.github.io/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Synthetic Face Augmentation",
+    "url": "https://synthetic-face-augmentation.github.io/",
+    "logo": "https://synthetic-face-augmentation.github.io/static/favicon/favicon-32x32.png",
+    "sameAs": [
+      "https://github.com/KorayUlusan/fsxl-dataset",
+      "https://github.com/KorayUlusan/fpxl-dataset",
+      "https://www.linkedin.com/in/korayulusan/",
+      "https://arxiv.org/abs/2505.03557"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
     "@context": "https://schema.org/",
     "@type": "Dataset",
     "name": "Flickr-Suits-XL (FSXL) and Flickr-Portraits-XL (FPXL)",
     "description": "Two high-quality datasets for AI-generated professional portraits, containing 1,208 high-resolution images aligned for SDXL training.",
     "url": "https://synthetic-face-augmentation.github.io/",
-    "keywords": ["Face Dataset", "AI Training Data", "SDXL", "DreamBooth", "InstantID"],
+    "keywords": ["Face Dataset", "AI Training Data", "SDXL", "Stable Diffusion XL", "DreamBooth", "InstantID"],
+    "variableMeasured": "FaceDistance metric",
+    "sameAs": ["https://github.com/KorayUlusan/fsxl-dataset", "https://github.com/KorayUlusan/fpxl-dataset"],
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "FSXL and FPXL dataset code",
+    "url": "https://github.com/KorayUlusan/fsxl-dataset",
+    "codeRepository": "https://github.com/KorayUlusan/fsxl-dataset",
+    "sameAs": ["https://github.com/KorayUlusan/fsxl-dataset", "https://github.com/KorayUlusan/fpxl-dataset"],
     "license": "https://creativecommons.org/licenses/by/4.0/"
   }
   </script>
@@ -202,7 +262,8 @@
       <div class="hero-body">
         <div class="container is-max-widescreen">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</h1>
+            <h1 class="title is-1 publication-title">Personalized AI Portraits</h1>
+            <h2 class="subtitle is-4 publication-fulltitle">Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID</h2>
           </div>
         </div>
       </div>
@@ -210,7 +271,6 @@
   </header>
 
   <main>
-
 
 
 
@@ -299,8 +359,8 @@
           <div class="hero-body">
             <div class="container">
               <div class="item">
-                <img src="static/figures/augmentation-pipeline-dreambooth-instantid.jpg" width="100%"
-                  alt="Augmentation pipeline combining DreamBooth and InstantID for improved facial resemblance in AI-generated portraits" />
+                <img loading="lazy" decoding="async" src="static/figures/augmentation-pipeline-dreambooth-instantid.jpg" width="100%"
+                  alt="Augmentation pipeline combining DreamBooth and InstantID for improved facial resemblance in Stable Diffusion XL (SDXL) portraits" />
                 <p class="image-caption">Augmentation pipeline: combining DreamBooth and InstantID to improve facial resemblance.</p>
                 <h2 class="content has-text-justified">
                   <br>
@@ -350,13 +410,13 @@
           <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
               <div class="column is-four-fifths">
-                <h2 class="title has-text-centered">Augmentation Strategy Results</h2>
+                <h2 id="results" class="title has-text-centered">Augmentation Strategy Results</h2>
                 <div class="content has-text-justified">
                   <p>
                     We evaluate augmentation strategies on <strong>DreamBooth</strong> and <strong>InstantID</strong> personalization methods using the SDXL model and a new
                     <em>FaceDistance</em> metric to measure facial similarity.
                   </p>
-                  <h3>Key Findings</h3>
+                  <h2>Key Findings</h2>
                   <ul>
                     <li><strong>Classical Augmentations (DreamBooth):</strong> Often introduce artifacts harming identity retention. Techniques like random flips and background
                       replacements can slow training or degrade image quality. Gray backgrounds (especially light gray) work best. Resizing images to ~1MP aligns well with SDXL
@@ -381,27 +441,27 @@
 
             <div id="results-carousel" class="carousel results-carousel">
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/classical-augmentations-analysis.jpg" width="750"
-                  alt="Classical augmentations effects (flip, crop, color) on DreamBooth facial similarity" />
+                <img loading="lazy" decoding="async" src="static/figures/classical-augmentations-analysis.jpg" width="750"
+                  alt="Comparison of classical vs generative data augmentation for Stable Diffusion XL (SDXL) facial resemblance" />
                 <p class="image-caption">Classical augmentations analysis: impact of flips, crops and color adjustments on identity retention.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/generative-augmentations-instantid.jpg" width="600"
+                <img loading="lazy" decoding="async" src="static/figures/generative-augmentations-instantid.jpg" width="600"
                   alt="Generative augmentations using InstantID synthetic images to enhance DreamBooth training" />
                 <p class="image-caption">Generative augmentations from InstantID used to synthesize diverse training images.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/dreambooth-instantid-comparison-ab.jpg" width="600"
+                <img loading="lazy" decoding="async" src="static/figures/dreambooth-instantid-comparison-ab.jpg" width="600"
                   alt="DreamBooth vs InstantID comparison (A/B) showing facial similarity metrics and example outputs" />
                 <p class="image-caption">Comparison A/B: facial similarity and qualitative examples for DreamBooth and InstantID.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/dreambooth-instantid-comparison-cd.jpg" width="600"
+                <img loading="lazy" decoding="async" src="static/figures/dreambooth-instantid-comparison-cd.jpg" width="600"
                   alt="DreamBooth vs InstantID comparison (C/D) highlighting identity preservation differences" />
                 <p class="image-caption">Comparison C/D: further results on identity preservation across methods.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/instantid-pipeline-results.jpg" width="600"
+                <img loading="lazy" decoding="async" src="static/figures/instantid-pipeline-results.jpg" width="600"
                   alt="InstantID pipeline professional portrait outputs with improved photorealism and resemblance" />
                 <p class="image-caption">InstantID pipeline outputs demonstrating professional portrait quality and resemblance.</p>
               </div>
@@ -415,7 +475,7 @@
           <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
               <div class="column is-four-fifths">
-                <h2 class="title has-text-centered">The FaceDistance Metric for Measuring Facial Similarity</h2>
+                <h2 id="metrics" class="title has-text-centered">The FaceDistance Metric for Measuring Facial Similarity</h2>
                 <div class="content has-text-justified">
                   <p>
                     To quantify facial similarity in generated images, we employ the <strong>FaceDistance</strong> metric based on FaceNet embeddings [Schroff et al., 2015].
@@ -459,7 +519,7 @@
                 </div>
 
                 <div class="column is-centered has-text-centered">
-                  <img src="static/figures/facedistance-metric-visualization.jpg" width="700"
+                  <img loading="lazy" decoding="async" src="static/figures/facedistance-metric-visualization.jpg" width="700"
                     alt="FaceDistance metric visualization ranking generated images by facial similarity using FaceNet embeddings" class="is-centered" />
                   <p class="image-caption">FaceDistance visualization: ranking generated portraits by facial similarity using FaceNet embeddings.</p>
                   <p class="has-text-centered" style="margin-top: 10px;">
@@ -494,7 +554,7 @@
                     generated image of the subject, yielding better facial similarity while maintaining compositional control.
                   </p>
                   <div class="column is-centered has-text-centered">
-                    <img src="static/figures/instantid-2step-generation.jpg"
+                    <img loading="lazy" decoding="async" src="static/figures/instantid-2step-generation.jpg"
                       alt="InstantID two-step generation: keypoints-based vs subject-based conditioning and impact on facial similarity" class="is-centered" />
                     <p class="image-caption">InstantID 2-step generation: trade-offs between keypoints conditioning and subject-based conditioning.</p>
                     <p class="has-text-justified" style="margin-top: 10px;">
@@ -550,22 +610,22 @@
             </div>
             <div id="results-carousel-2" class="carousel results-carousel">
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/userstudy-demographics.jpg" width="750"
+                <img loading="lazy" decoding="async" src="static/figures/userstudy-demographics.jpg" width="750"
                   alt="User study demographics for 97 participants evaluating DreamBooth and InstantID portrait generators" class="is-centered" />
                 <p class="image-caption">User study demographics: 97 participants who evaluated DreamBooth and InstantID portraits.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/userstudy-quality-assessment.jpg" width="750"
+                <img loading="lazy" decoding="async" src="static/figures/userstudy-quality-assessment.jpg" width="750"
                   alt="User study quality assessment comparing DreamBooth and InstantID for professional portrait generation" class="is-centered" />
                 <p class="image-caption">User study quality assessment: perceived professionalism and image quality across methods.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/userstudy-facial-similarity-ratings.jpg" width="750"
+                <img loading="lazy" decoding="async" src="static/figures/userstudy-facial-similarity-ratings.jpg" width="750"
                   alt="Facial similarity ratings from user study comparing DreamBooth and InstantID in identity preservation" class="is-centered" />
                 <p class="image-caption">Facial similarity ratings: quantitative scores comparing DreamBooth and InstantID.</p>
               </div>
               <div class="column is-centered has-text-centered">
-                <img src="static/figures/userstudy-ai-detection-accuracy.jpg" width="700"
+                <img loading="lazy" decoding="async" src="static/figures/userstudy-ai-detection-accuracy.jpg" width="700"
                   alt="AI detection accuracy results from user study evaluating ability to identify AI-generated portraits" class="is-centered" />
                 <p class="image-caption">AI detection accuracy: how well participants identified AI-generated portraits.</p>
               </div>
@@ -574,63 +634,34 @@
         </div>
         </div>
       </section>
-      <section class="section hero" aria-label="FSXL and FPXL Portrait Datasets">
+      <section class="section hero" id="datasets" aria-label="FSXL and FPXL Portrait Datasets">
         <div class="hero-body">
           <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
               <div class="column is-four-fifths">
-                <h2 class="title has-text-centered">
-                  Download the FSXL & FPXL Professional Portrait Datasets
-                </h2>
-                <div class="buttons is-centered" style="margin-top: 1.5rem;">
-                  <span class="link-block">
-                    <a href="https://github.com/KorayUlusan/fsxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
-                      <span class="icon">
-                        <i class="fas fa-database"></i>
-                      </span>
-                      <span>FSXL Dataset</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://github.com/KorayUlusan/fpxl-dataset" target="_blank" class="external-link button is-normal is-rounded">
-                      <span class="icon">
-                        <i class="fas fa-database"></i>
-                      </span>
-                      <span>FPXL Dataset</span>
-                    </a>
-                  </span>
-                </div>
-
+                <h2 class="title is-2">FSXL & FPXL: High-Resolution Face Datasets for SDXL</h2>
                 <div class="content has-text-justified">
                   <p>
-                    We introduce <strong>Flickr-Suits-XL (FSXL)</strong> and <strong>Flickr-Portraits-XL (FPXL)</strong>, two high-quality datasets for AI-generated professional
-                    portraits.
+                    We release two curated datasets specifically designed for training and benchmarking <strong>personalized text-to-image models</strong> such as
+                    <strong>Stable Diffusion XL (SDXL)</strong>, DreamBooth and InstantID.
                   </p>
+                  <ul>
+                    <li><strong>FSXL (Flickr-Suits-XL):</strong> Professional attire, studio-like lighting, and aligned high-resolution portraits.</li>
+                    <li><strong>FPXL (Flickr-Portraits-XL):</strong> In-the-wild poses, diverse expressions, and variety useful for robustness testing.</li>
+                  </ul>
+                  <!-- <a href="https://github.com/KorayUlusan/fsxl-dataset" target="_blank" class="button is-link" style="margin-top:0.75rem;">Access 1,200+ High-Res Images on GitHub</a> -->
 
-                  <p>
-                    <strong>FSXL</strong> includes 1,208 high-resolution images of people in formal attire, sourced from Flickr under permissive licenses. Images were filtered
-                    using MTCNN (single face), aligned, and cropped to match SDXL training resolution, with faces centered horizontally and positioned one-third from the top.
-                  </p>
-
-                  <p>
-                    <strong>FPXL</strong> follows the same process using raw "in-the-wild" FFHQ images. We thank the authors of the FFHQ dataset.
-                    Both datasets inherit demographic biases.
-                  </p>
-
-
-                  <div id="results-carousel-2" class="carousel results-carousel">
+                  <div id="results-carousel-2" class="carousel results-carousel" style="margin-top:1rem;">
                     <div class="column is-centered has-text-centered">
-                      <img src="static/figures/fsxl-samples.jpg" width="400" alt="FSXL dataset samples: professional portraits in formal attire for SDXL training"
+                      <img loading="lazy" decoding="async" src="static/figures/fsxl-samples.jpg" width="400" alt="FSXL samples: curated professional portrait images for training Stable Diffusion XL (SDXL)"
                         class="is-centered" />
                       <p class="image-caption">FSXL samples: curated professional portrait images for model training.</p>
                     </div>
                     <div class="column is-centered has-text-centered">
-                      <img src="static/figures/fpxl-samples.jpg" width="400" alt="FPXL dataset samples: FFHQ in-the-wild portrait images aligned for SDXL" class="is-centered" />
+                      <img loading="lazy" decoding="async" src="static/figures/fpxl-samples.jpg" width="400" alt="FPXL samples: diverse in-the-wild portraits aligned for SDXL training" class="is-centered" />
                       <p class="image-caption">FPXL samples: in-the-wild portrait images aligned and cropped for training.</p>
                     </div>
                   </div>
-
 
                 </div>
               </div>
